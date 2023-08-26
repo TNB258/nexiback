@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "privecies",
+  "info": {
+    "singularName": "privecy",
+    "pluralName": "privecies",
+    "displayName": "privecy"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

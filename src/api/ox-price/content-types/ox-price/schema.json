@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ox_prices",
+  "info": {
+    "singularName": "ox-price",
+    "pluralName": "ox-prices",
+    "displayName": "ox_price",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "price": {
+      "type": "decimal",
+      "required": true
+    },
+    "lock": {
+      "type": "boolean"
+    },
+    "users_permissions_users": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "ox_prices"
+    },
+    "oxtions": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::oxtion.oxtion",
+      "inversedBy": "ox_prices"
+    }
+  }
+}

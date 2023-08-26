@@ -1,0 +1,81 @@
+{
+  "kind": "collectionType",
+  "collectionName": "oxtions",
+  "info": {
+    "singularName": "oxtion",
+    "pluralName": "oxtions",
+    "displayName": "oxtion",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "startingdate": {
+      "type": "datetime"
+    },
+    "days": {
+      "type": "integer"
+    },
+    "enddate": {
+      "type": "datetime"
+    },
+    "lock": {
+      "type": "boolean"
+    },
+    "p_title": {
+      "type": "string"
+    },
+    "p_description": {
+      "type": "string"
+    },
+    "p_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "p_terms": {
+      "type": "text"
+    },
+    "ox_id": {
+      "type": "uid"
+    },
+    "starting_price": {
+      "type": "decimal"
+    },
+    "notifications": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::notification.notification",
+      "mappedBy": "oxtions"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "mappedBy": "oxtions"
+    },
+    "orders": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::order.order",
+      "mappedBy": "oxtions"
+    },
+    "ox_prices": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::ox-price.ox-price",
+      "mappedBy": "oxtions"
+    },
+    "users_permissions_users": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "oxtions"
+    }
+  }
+}
